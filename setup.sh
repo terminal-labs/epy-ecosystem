@@ -15,5 +15,3 @@ cd examples/runners
 git git@github.com:terminal-labs/runner-compilepython-wip.git
 pip install -e runner-compilepython-wip
 cd ../..
-
-cp -r examples/plugins plugins
