@@ -10,8 +10,7 @@ pip install -e epy-setup-wip
 pip install -e job-light-runner
 cd ..
 
-mkdir -p examples/runners
-cd examples/runners
-git git@github.com:terminal-labs/runner-compilepython-wip.git
+mkdir -p runners
+cd runners
+git clone git@github.com:terminal-labs/runner-compilepython-wip.git
 pip install -e runner-compilepython-wip
-cd ../..
