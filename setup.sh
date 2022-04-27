@@ -12,8 +12,8 @@ cd ..
 
 mkdir -p examples/runners
 cd examples/runners
-git clone git@github.com:terminal-labs/node-wip.git
-pip install -e node-wip
+git git@github.com:terminal-labs/runner-compilepython-wip.git
+pip install -e runner-compilepython-wip
 cd ../..
 
 cp -r examples/plugins plugins
