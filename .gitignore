@@ -1,5 +1,5 @@
 deps
-examples/runners
+runners
 
 .coverage
 logs
