@@ -1,5 +1,6 @@
-mkdir /vagrant/temp
-
+su vagrant <<'EOF'
+  mkdir /vagrant/temp
+EOF
 if [ ! -f "/vagrant/temp/deps" ]; then
   apt update
   apt -y upgrade
@@ -17,8 +18,10 @@ if [ ! -f "/vagrant/temp/deps" ]; then
   apt install -y wget
 
   apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-  touch /vagrant/temp/deps
 fi
+su vagrant <<'EOF'
+  touch /vagrant/temp/deps
+EOF
 
 su vagrant <<'EOF'
   cd /home/vagrant
