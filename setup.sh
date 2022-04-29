@@ -20,5 +20,10 @@ cd ..
 
 mkdir -p runners
 cd runners
-git clone git@github.com:terminal-labs/runner-compilepython-wip.git
+if [ -z "$GITHUB_ACTIONS" ]
+then
+   git clone https://github.com/terminal-labs/runner-compilepython-wip.git
+else    
+   git clone git@github.com:terminal-labs/runner-compilepython-wip.git
+fi
 pip install -e runner-compilepython-wip
