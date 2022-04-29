@@ -20,6 +20,7 @@ class Plugin:
         name ="raycaster"
         #uuid_name = uuid.uuid4().hex
         uuid_name = "211edb17fcf94d5eb844f362d0dfe07a"
+        print(uuid_name)
         jobid = 8
         send_to_runner(apppath, uuid_name, jobid)
         message = call_runner_track(uuid_name)
