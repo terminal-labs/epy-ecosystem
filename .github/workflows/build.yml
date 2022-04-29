@@ -18,7 +18,6 @@ jobs:
         curl https://raw.githubusercontent.com/terminal-labs/bash-environment-shelf/master/prepscripts/mock_vagrant.sh --output .repo/mock_vagrant.sh
         sudo bash .repo/mock_vagrant.sh
         cd /vagrant
-        ssh-add /home/vagrant/.ssh/id_rsa
         sudo bash deps.sh
         sudo su vagrant -c 'cd /vagrant; source /home/vagrant/miniconda3/etc/profile.d/conda.sh; source /home/vagrant/.bashrc;  conda activate runner'
         sudo su vagrant -c 'cd /vagrant; eval `ssh-agent -s`; ssh-add /home/vagrant/.ssh/id_rsa; bash setup.sh'
