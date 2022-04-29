@@ -18,6 +18,7 @@ jobs:
         curl https://raw.githubusercontent.com/terminal-labs/bash-environment-shelf/master/prepscripts/mock_vagrant.sh --output .repo/mock_vagrant.sh
         sudo bash .repo/mock_vagrant.sh
         sudo bash deps.sh
-        ssh-keygen -q
+        ssh-keygen -q -N ""
         . /home/vagrant/.bashrc
         bash setup.sh
+        conda activate runner
