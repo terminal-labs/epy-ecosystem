@@ -17,6 +17,8 @@ jobs:
       run: |
         curl https://raw.githubusercontent.com/terminal-labs/bash-environment-shelf/master/prepscripts/mock_vagrant.sh --output .repo/mock_vagrant.sh
         sudo bash .repo/mock_vagrant.sh
+        chmod 700 /home/vagrant/.ssh
+        chown -R vagrant /home/vagrant/.ssh
         cd /vagrant
         sudo bash deps.sh
         ssh-keygen -t rsa -f /home/vagrant/.ssh/id_rsa -q -P ""
